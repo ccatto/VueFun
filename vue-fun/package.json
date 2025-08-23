@@ -14,11 +14,13 @@
     "lint:format": "prettier --check ."
   },
   "dependencies": {
-    "vue": "^3.5.19"
+    "vue": "^3.5.19",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
     "@types/vue": "^2.0.0",
+    "@types/vue-router": "^2.0.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/typescript-plugin": "^3.0.6",

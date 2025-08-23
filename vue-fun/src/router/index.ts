@@ -1,3 +1,17 @@
 // vue-fun/src/router/index.ts
 
-// place holder for our router in vue;
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '@/views/Home.vue';
+import Cart from '@/views/Cart.vue';
+
+const routes = [
+  { path: '/', name: 'Home', component: Home },
+  { path: '/cart', name: 'Cart', component: Cart },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
