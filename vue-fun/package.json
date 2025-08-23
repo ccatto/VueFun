@@ -9,21 +9,29 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "lint:format": "prettier --check ."
   },
   "dependencies": {
-    "vue": "^3.5.18"
+    "vue": "^3.5.19"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "@types/vue": "^2.0.0",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/typescript-plugin": "^3.0.6",
     "autoprefixer": "^10.4.21",
+    "eslint-config-prettier": "^10.1.8",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.12",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^3.4.0",
     "typescript": "^5.9.2",
     "vite": "^7.0.6",
-    "vite-plugin-vue-devtools": "^8.0.0"
+    "vite-plugin-vue-devtools": "^8.0.0",
+    "vue-tsc": "^3.0.6"
   },
   "packageManager": "yarn@4.7.0+sha512.5a0afa1d4c1d844b3447ee3319633797bcd6385d9a44be07993ae52ff4facabccafb4af5dcd1c2f9a94ac113e5e9ff56f6130431905884414229e284e37bb7c9"
 }

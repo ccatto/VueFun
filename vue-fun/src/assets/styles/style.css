@@ -1,0 +1,6 @@
+/* vue-fun/src/style.css */
+/* vue-fun/src/assets/styles/style.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
