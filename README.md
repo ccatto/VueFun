@@ -17,6 +17,7 @@ This app includes some fundamental node packages such as:
 * eslint
 * prettier
 * customized favicon orange H
+* setup some alias for a few directories
 
 ### Todos 
 * a bunch HA

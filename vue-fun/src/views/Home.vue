@@ -2,11 +2,11 @@
 
 <template>
   <Layout>
-    <h2 class="text-lg font-semibold">Welcome to the Home Page</h2>
-    <p>This is the body content for Home.</p>
+    <HomeCatto />
   </Layout>
 </template>
 
 <script setup lang="ts">
 import Layout from '@/components/layout/Layout.vue';
+import HomeCatto from '@/components/ui/organisms/HomeCatto.vue';
 </script>
