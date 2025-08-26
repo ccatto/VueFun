@@ -1,13 +1,16 @@
 <!-- vue-fun/src/components/ui/molecules/CartItemCatto.vue -->
+
+
+<!-- vue-fun/src/components/ui/molecules/CartItemCatto.vue -->
 <template>
-  <div class="bg-white rounded-lg shadow-sm border p-6">
+  <div class="bg-slate-700 rounded-lg shadow-sm border border-slate-600 p-6">
     <div class="flex gap-6">
       <!-- Product Image -->
       <div class="flex-shrink-0">
         <img
           :src="item.image"
           :alt="item.name"
-          class="w-32 h-32 object-cover rounded-lg bg-gray-100"
+          class="w-32 h-32 object-cover rounded-lg bg-slate-600"
         />
       </div>
 
@@ -15,30 +18,31 @@
       <div class="flex-1">
         <div class="flex justify-between items-start">
           <div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ item.name }}</h3>
-            <p class="text-gray-600 mb-4 leading-relaxed">{{ item.description }}</p>
+            <h3 class="text-xl font-semibold text-slate-50 mb-2">{{ item.name }}</h3>
+            <p class="text-slate-300 mb-4 leading-relaxed">{{ item.description }}</p>
 
             <div class="flex items-center gap-4 mb-4">
-              <span class="text-sm text-gray-500">Size:</span>
-              <span class="text-sm font-medium">{{ item.size }}</span>
-              <span class="text-sm text-gray-500">Color:</span>
-              <span class="text-sm font-medium">{{ item.color }}</span>
+              <span class="text-sm text-slate-400">Size:</span>
+              <span class="text-sm font-medium text-slate-200">{{ item.size }}</span>
+              <span class="text-sm text-slate-400">Color:</span>
+              <span class="text-sm font-medium text-slate-200">{{ item.color }}</span>
             </div>
 
             <div class="flex items-center gap-4">
-              <span class="text-2xl font-bold text-gray-900">${{ item.price }}</span>
-              <div class="flex items-center border rounded-lg">
+              <span class="text-2xl font-bold text-orange-500">${{ item.price }}</span>
+              <div class="flex items-center border border-slate-500 rounded-lg">
                 <button
                   @click="decreaseQuantity"
-                  class="px-3 py-1 hover:bg-gray-100 transition-colors"
+                  class="px-3 py-1 text-slate-200 hover:bg-slate-600 transition-colors"
                   :disabled="item.quantity <= 1"
+                  :class="{ 'opacity-50 cursor-not-allowed': item.quantity <= 1 }"
                 >
                   -
                 </button>
-                <span class="px-4 py-1 border-x">{{ item.quantity }}</span>
+                <span class="px-4 py-1 border-x border-slate-500 text-slate-200">{{ item.quantity }}</span>
                 <button
                   @click="increaseQuantity"
-                  class="px-3 py-1 hover:bg-gray-100 transition-colors"
+                  class="px-3 py-1 text-slate-200 hover:bg-slate-600 transition-colors"
                 >
                   +
                 </button>
@@ -47,7 +51,7 @@
           </div>
 
           <!-- Remove Button -->
-          <button @click="removeItem" class="text-red-500 hover:text-red-700 transition-colors p-2">
+          <button @click="removeItem" class="text-red-400 hover:text-red-300 transition-colors p-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
@@ -64,28 +68,10 @@
 </template>
 
 <script setup lang="ts">
-interface CartItem {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  quantity: number;
-  size: string;
-  color: string;
-  image: string;
-}
+import type { CartItemProps, CartItemEvents } from '@/types/cart';
 
-interface Props {
-  item: CartItem;
-}
-
-interface Emits {
-  (e: 'update-quantity', id: number, quantity: number): void;
-  (e: 'remove-item', id: number): void;
-}
-
-const props = defineProps<Props>();
-const emit = defineEmits<Emits>();
+const props = defineProps<CartItemProps>();
+const emit = defineEmits<CartItemEvents>();
 
 const increaseQuantity = () => {
   emit('update-quantity', props.item.id, props.item.quantity + 1);

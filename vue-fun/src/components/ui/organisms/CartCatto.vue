@@ -2,15 +2,15 @@
 <!-- vue-fun/src/components/ui/organisms/CartCatto.vue -->
 
 <template>
-  <div class="min-h-screen bg-gray-50 py-8">
+  <div class="min-h-screen bg-slate-800 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <div class="mb-8">
         <div class="flex items-center gap-3 mb-4">
-          <GlobeIcon class="w-8 h-8 text-blue-600" />
-          <h1 class="text-3xl font-bold text-gray-900">Shopping Cart</h1>
+          <GlobeIcon class="w-8 h-8 text-orange-500" />
+          <h1 class="text-3xl font-bold text-slate-50">Shopping Cart</h1>
         </div>
-        <p class="text-gray-600">Review your items and proceed to checkout</p>
+        <p class="text-slate-300">Review your items and proceed to checkout</p>
       </div>
 
       <!-- Cart Content -->
@@ -18,7 +18,7 @@
         <!-- Left Section - Cart Items (2/3 width) -->
         <div class="lg:col-span-2 space-y-4">
           <div v-if="cartItems.length === 0" class="text-center py-12">
-            <div class="text-gray-400 mb-4">
+            <div class="text-slate-500 mb-4">
               <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -28,8 +28,8 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Your cart is empty</h3>
-            <p class="text-gray-500">Add some items to get started!</p>
+            <h3 class="text-xl font-medium text-slate-50 mb-2">Your cart is empty</h3>
+            <p class="text-slate-400">Add some items to get started!</p>
           </div>
 
           <CartItemCatto

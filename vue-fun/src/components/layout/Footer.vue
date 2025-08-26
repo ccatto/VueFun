@@ -7,13 +7,13 @@ const version = pkg.version;
 </script>
 
 <template>
-  <footer class="bg-gray-200 text-center p-4">
-    <p>
+  <footer class="bg-slate-800 text-center p-4">
+    <p class="text-slate-50">
       &copy; 2025 Vue Fun App Built by
       <a href="https://www.chriscatto.com/" target="_blank" rel="noopener noreferrer">
         Chris Catto
       </a>
-      to explore Vue&nbsp;<span className="text-center text-sm text-slate-500 dark:text-slate-500">
+      to explore Vue&nbsp;<span className="text-center text-sm text-slate-400 dark:text-slate-400">
         (v{{ version }})
       </span>
     </p>

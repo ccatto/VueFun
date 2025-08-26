@@ -1,7 +1,7 @@
 <!-- vue-fun/src/components/layout/Layout.vue -->
 
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="flex flex-col min-h-screen bg-slate-950">
     <Header />
     <main class="flex-1 p-4">
       <!-- Page-specific content goes here -->
