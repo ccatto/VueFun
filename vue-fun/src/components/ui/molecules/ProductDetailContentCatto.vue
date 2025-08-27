@@ -224,6 +224,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { Product } from '@/types/product';
 
 interface ProductSize {
   value: string;
@@ -235,24 +236,6 @@ interface ProductColor {
   value: string;
   name: string;
   hex: string;
-}
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  originalPrice?: number;
-  category: string;
-  images: string[];
-  rating?: number;
-  reviewCount?: number;
-  features?: string[];
-  sizes?: ProductSize[];
-  colors?: ProductColor[];
-  inStock: boolean;
-  stockCount?: number;
-  maxQuantity: number;
 }
 
 interface Props {
