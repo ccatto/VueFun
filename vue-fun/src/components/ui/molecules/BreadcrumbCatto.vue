@@ -2,9 +2,9 @@
 
 <template>
   <nav class="mb-8">
-    <ol class="flex items-center space-x-2 text-sm text-gray-500">
+    <ol class="flex items-center space-x-2 text-sm text-gray-400">
       <li>
-        <button @click="$emit('go-home')" class="hover:text-blue-600 transition-colors">
+        <button @click="$emit('go-home')" class="hover:text-orange-400 transition-colors">
           Home
         </button>
       </li>
@@ -21,7 +21,7 @@
         </svg>
       </li>
       <li>
-        <button @click="$emit('go-category')" class="hover:text-blue-600 transition-colors">
+        <button @click="$emit('go-category')" class="hover:text-orange-400 transition-colors">
           {{ category }}
         </button>
       </li>
@@ -37,7 +37,7 @@
           />
         </svg>
       </li>
-      <li class="text-gray-900 font-medium">
+      <li class="text-slate-50 font-medium">
         {{ productName }}
       </li>
     </ol>

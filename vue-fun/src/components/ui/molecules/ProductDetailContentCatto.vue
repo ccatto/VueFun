@@ -1,12 +1,12 @@
 <!-- vue-fun/src/components/ui/molecules/ProductDetailContent.vue -->
 
 <template>
-  <div class="bg-white rounded-lg shadow-sm border overflow-hidden">
+  <div class="bg-gray-800 rounded-lg shadow-sm border border-gray-700 overflow-hidden">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
       <!-- Left Section - Product Images -->
       <div class="space-y-4">
         <!-- Main Image -->
-        <div class="aspect-square rounded-lg overflow-hidden bg-gray-100">
+        <div class="aspect-square rounded-lg overflow-hidden bg-gray-700">
           <img
             :src="selectedImage"
             :alt="product.name"
@@ -22,7 +22,7 @@
             @click="selectedImage = image"
             class="flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors"
             :class="
-              selectedImage === image ? 'border-blue-500' : 'border-gray-200 hover:border-gray-300'
+              selectedImage === image ? 'border-orange-500' : 'border-gray-600 hover:border-gray-500'
             "
           >
             <img
@@ -39,16 +39,16 @@
         <!-- Product Title and Price -->
         <div>
           <div class="flex items-center gap-2 mb-2">
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
+            <span class="text-sm font-medium text-orange-400 bg-orange-900/20 px-2 py-1 rounded">
               {{ product.category }}
             </span>
             <div v-if="product.rating" class="flex items-center gap-1">
-              <div class="flex text-yellow-400">
+              <div class="flex text-orange-400">
                 <svg
                   v-for="star in 5"
                   :key="star"
                   class="w-4 h-4"
-                  :class="star <= product.rating ? 'fill-current' : 'text-gray-300'"
+                  :class="star <= product.rating ? 'fill-current' : 'text-gray-600'"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -56,18 +56,18 @@
                   />
                 </svg>
               </div>
-              <span class="text-sm text-gray-600 ml-1">({{ product.reviewCount }} reviews)</span>
+              <span class="text-sm text-gray-400 ml-1">({{ product.reviewCount }} reviews)</span>
             </div>
           </div>
-          <h1 class="text-3xl font-bold text-gray-900 mb-2">{{ product.name }}</h1>
+          <h1 class="text-3xl font-bold text-slate-50 mb-2">{{ product.name }}</h1>
           <div class="flex items-center gap-4">
-            <span class="text-3xl font-bold text-gray-900">${{ product.price }}</span>
-            <span v-if="product.originalPrice" class="text-xl text-gray-500 line-through">
+            <span class="text-3xl font-bold text-slate-50">${{ product.price }}</span>
+            <span v-if="product.originalPrice" class="text-xl text-gray-400 line-through">
               ${{ product.originalPrice }}
             </span>
             <span
               v-if="product.originalPrice"
-              class="text-sm font-medium text-green-600 bg-green-50 px-2 py-1 rounded"
+              class="text-sm font-medium text-green-400 bg-green-900/20 px-2 py-1 rounded"
             >
               Save ${{ (product.originalPrice - product.price).toFixed(2) }}
             </span>
@@ -76,17 +76,17 @@
 
         <!-- Product Description -->
         <div>
-          <h3 class="text-lg font-semibold mb-3">Description</h3>
-          <p class="text-gray-600 leading-relaxed">{{ product.description }}</p>
+          <h3 class="text-lg font-semibold mb-3 text-slate-50">Description</h3>
+          <p class="text-gray-300 leading-relaxed">{{ product.description }}</p>
         </div>
 
         <!-- Product Features -->
         <div v-if="product.features && product.features.length > 0">
-          <h3 class="text-lg font-semibold mb-3">Key Features</h3>
+          <h3 class="text-lg font-semibold mb-3 text-slate-50">Key Features</h3>
           <ul class="space-y-2">
             <li v-for="feature in product.features" :key="feature" class="flex items-start gap-2">
               <svg
-                class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
+                class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -98,14 +98,14 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              <span class="text-gray-700">{{ feature }}</span>
+              <span class="text-gray-300">{{ feature }}</span>
             </li>
           </ul>
         </div>
 
         <!-- Size Selection -->
         <div v-if="product.sizes && product.sizes.length > 0">
-          <h3 class="text-lg font-semibold mb-3">Size</h3>
+          <h3 class="text-lg font-semibold mb-3 text-slate-50">Size</h3>
           <div class="flex flex-wrap gap-2">
             <button
               v-for="size in product.sizes"
@@ -115,9 +115,9 @@
               class="px-4 py-2 border rounded-lg font-medium transition-colors"
               :class="[
                 selectedSize === size.value
-                  ? 'border-blue-500 bg-blue-50 text-blue-700'
-                  : 'border-gray-300 hover:border-gray-400',
-                !size.available && 'opacity-50 cursor-not-allowed bg-gray-100',
+                  ? 'border-orange-500 bg-orange-900/20 text-orange-400'
+                  : 'border-gray-600 hover:border-gray-500 text-gray-300',
+                !size.available && 'opacity-50 cursor-not-allowed bg-gray-700',
               ]"
             >
               {{ size.label }}
@@ -127,7 +127,7 @@
 
         <!-- Color Selection -->
         <div v-if="product.colors && product.colors.length > 0">
-          <h3 class="text-lg font-semibold mb-3">Color</h3>
+          <h3 class="text-lg font-semibold mb-3 text-slate-50">Color</h3>
           <div class="flex flex-wrap gap-2">
             <button
               v-for="color in product.colors"
@@ -136,12 +136,12 @@
               class="flex items-center gap-2 px-4 py-2 border rounded-lg font-medium transition-colors"
               :class="
                 selectedColor === color.value
-                  ? 'border-blue-500 bg-blue-50 text-blue-700'
-                  : 'border-gray-300 hover:border-gray-400'
+                  ? 'border-orange-500 bg-orange-900/20 text-orange-400'
+                  : 'border-gray-600 hover:border-gray-500 text-gray-300'
               "
             >
               <div
-                class="w-4 h-4 rounded-full border border-gray-300"
+                class="w-4 h-4 rounded-full border border-gray-500"
                 :style="{ backgroundColor: color.hex }"
               ></div>
               {{ color.name }}
@@ -152,19 +152,19 @@
         <!-- Quantity and Add to Cart -->
         <div class="space-y-4">
           <div>
-            <h3 class="text-lg font-semibold mb-3">Quantity</h3>
-            <div class="flex items-center border rounded-lg w-fit">
+            <h3 class="text-lg font-semibold mb-3 text-slate-50">Quantity</h3>
+            <div class="flex items-center border border-gray-600 rounded-lg w-fit">
               <button
                 @click="decreaseQuantity"
-                class="px-4 py-2 hover:bg-gray-100 transition-colors"
+                class="px-4 py-2 hover:bg-gray-700 transition-colors text-gray-300"
                 :disabled="quantity <= 1"
               >
                 -
               </button>
-              <span class="px-6 py-2 border-x">{{ quantity }}</span>
+              <span class="px-6 py-2 border-x border-gray-600 text-slate-50">{{ quantity }}</span>
               <button
                 @click="increaseQuantity"
-                class="px-4 py-2 hover:bg-gray-100 transition-colors"
+                class="px-4 py-2 hover:bg-gray-700 transition-colors text-gray-300"
                 :disabled="quantity >= product.maxQuantity"
               >
                 +
@@ -177,18 +177,18 @@
             <button
               @click="addToCart"
               :disabled="!canAddToCart"
-              class="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              class="flex-1 bg-orange-600 text-slate-50 py-3 px-6 rounded-lg font-semibold hover:bg-orange-700 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Add to Cart - ${{ (product.price * quantity).toFixed(2) }}
             </button>
             <button
               @click="addToWishlist"
-              class="px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              class="px-4 py-3 border border-gray-600 rounded-lg hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-800"
               :title="isInWishlist ? 'Remove from Wishlist' : 'Add to Wishlist'"
             >
               <svg
                 class="w-5 h-5"
-                :class="isInWishlist ? 'text-red-500 fill-current' : 'text-gray-500'"
+                :class="isInWishlist ? 'text-red-400 fill-current' : 'text-gray-400'"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -208,12 +208,12 @@
         <div class="flex items-center gap-2 text-sm">
           <div
             class="w-2 h-2 rounded-full"
-            :class="product.inStock ? 'bg-green-500' : 'bg-red-500'"
+            :class="product.inStock ? 'bg-green-400' : 'bg-red-400'"
           ></div>
-          <span :class="product.inStock ? 'text-green-600' : 'text-red-600'">
+          <span :class="product.inStock ? 'text-green-400' : 'text-red-400'">
             {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
           </span>
-          <span v-if="product.inStock && product.stockCount" class="text-gray-500">
+          <span v-if="product.inStock && product.stockCount" class="text-gray-400">
             ({{ product.stockCount }} remaining)
           </span>
         </div>

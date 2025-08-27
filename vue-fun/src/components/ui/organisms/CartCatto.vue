@@ -66,7 +66,7 @@ import OrderSummaryCatto from '../molecules/OrderSummaryCatto.vue';
 // Replace with your existing icon component or add lucide-vue-next
 // import { GlobeIcon } from 'lucide-vue-next'
 
-// Temporary inline SVG component until you add lucide-vue-next
+// Temporary inline SVG component until we  add lucide-vue-next
 const GlobeIcon = {
   template: `
     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +146,7 @@ const removeItem = (id: number) => {
 const handleCheckout = () => {
   // Handle checkout logic
   console.log('Proceeding to checkout...');
-  // You can emit an event or navigate to checkout page
+  // We  can emit an event or navigate to checkout page
 };
 
 const handlePromoCode = (code: string) => {

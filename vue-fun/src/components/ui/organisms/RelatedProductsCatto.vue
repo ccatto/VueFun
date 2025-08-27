@@ -1,8 +1,8 @@
 <!-- vue-fun/src/components/ui/organisms/RelatedProductsCatto.vue -->
 
 <template>
-  <div v-if="products.length > 0" class="bg-white rounded-lg shadow-sm border p-8">
-    <h2 class="text-2xl font-bold text-gray-900 mb-6">You Might Also Like</h2>
+  <div v-if="products.length > 0" class="bg-gray-800 rounded-lg shadow-sm border border-gray-700 p-8">
+    <h2 class="text-2xl font-bold text-slate-50 mb-6">You Might Also Like</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <ProductCardCatto
         v-for="item in products"

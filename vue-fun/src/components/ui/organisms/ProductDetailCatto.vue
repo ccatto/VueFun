@@ -1,7 +1,7 @@
 <!-- vue-fun/src/components/ui/organisms/ProductDetailCatto.vue -->
 
 <template>
-  <div class="min-h-screen bg-gray-50 py-8">
+  <div class="min-h-screen bg-gray-900 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Breadcrumb Navigation -->
       <BreadcrumbCatto
@@ -41,12 +41,13 @@ import BreadcrumbCatto from '../molecules/BreadcrumbCatto.vue';
 import ProductDetailHeaderCatto from './ProductDetailHeaderCatto.vue';
 import ToastCatto from '../atoms/ToastCatto.vue';
 import RelatedProductsCatto from './RelatedProductsCatto.vue';
+import router from '@/router';
 
 // // Data
 const product = ref<Product>(sampleProduct);
 const relatedProducts = ref<Product[]>(mockRelated);
 
-// Temporary inline SVG component until you add lucide-vue-next
+// Temporary inline SVG component until we add lucide-vue-next
 const GlobeIcon = {
   template: `
     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +64,7 @@ const successMessage = ref<string>('');
 const handleAddToCart = (payload: AddToCartPayload): void => {
   console.log('Adding to cart:', payload);
   showToast('Added to cart successfully!');
-  // Here you would typically call your cart service/store
+  // Here we would typically call your cart service/store
 };
 
 const handleAddToWishlist = (productId: number): void => {
@@ -87,11 +88,12 @@ const showToast = (message: string): void => {
 const goBack = (): void => {
   // Handle navigation back
   console.log('Going back...');
-  // You can use router.go(-1) or emit an event
+  router.go(-1);
 };
 
 const goHome = (): void => {
   console.log('Going to home...');
+  router.push('/');
   // Navigate to home page
 };
 

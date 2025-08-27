@@ -3,17 +3,17 @@
 <template>
   <div class="flex items-center justify-between mb-8">
     <div class="flex items-center gap-3">
-      <GlobeIcon class="text-blue-600" />
+      <GlobeIcon class="text-orange-500" />
       <div>
-        <h1 class="text-3xl font-bold text-gray-900">Product Details</h1>
-        <p class="text-gray-600">Explore our premium collection</p>
+        <h1 class="text-3xl font-bold text-slate-50">Product Details</h1>
+        <p class="text-gray-400">Explore our premium collection</p>
       </div>
     </div>
 
     <div class="flex items-center gap-3">
       <button
         @click="$emit('go-back')"
-        class="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+        class="flex items-center gap-2 px-4 py-2 text-gray-400 hover:text-slate-50 transition-colors"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -27,7 +27,7 @@
       </button>
       <button
         @click="$emit('share')"
-        class="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors"
+        class="flex items-center gap-2 px-4 py-2 text-gray-400 hover:text-slate-50 transition-colors"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path

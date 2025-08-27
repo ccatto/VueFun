@@ -1,9 +1,9 @@
-<!-- vue-fun/src/components/ui/atoms/Toast.vue -->
+<!-- vue-fun/src/components/ui/atoms/ToastCatto.vue -->
 
 <template>
   <div
     v-if="visible"
-    class="fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 z-50 animate-slide-up"
+    class="fixed bottom-4 right-4 bg-orange-600 text-slate-50 px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 z-50 animate-slide-up"
   >
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
