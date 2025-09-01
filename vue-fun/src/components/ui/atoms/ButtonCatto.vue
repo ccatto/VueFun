@@ -72,6 +72,7 @@ const getWidthClass = (width: string) => {
   return widthStyles[width as keyof typeof widthStyles] || width
 }
 
+// computed is imported from Vue and new Composition API 
 const getAnimationClass = computed(() => {
   if (!isAnimating.value || props.animation === 'none') {
     return ''

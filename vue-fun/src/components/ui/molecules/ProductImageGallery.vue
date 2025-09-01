@@ -28,6 +28,7 @@
 </template>
 
 <script setup lang="ts">
+// example of Composition API
 import { ref } from 'vue';
 
 defineProps<{
