@@ -13,6 +13,9 @@
       <RouterLink to="/product/1" class="hover:underline" active-class="font-bold underline">
         PDP
       </RouterLink>
+      <RouterLink to="/tutorial-catto" class="hover:underline" active-class="font-bold underline">
+        Vue Tutorial
+      </RouterLink>
     </nav>
   </header>
 </template>

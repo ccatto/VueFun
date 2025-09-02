@@ -1,6 +1,5 @@
 <!-- vue-fun/src/components/ui/molecules/CartItemCatto.vue -->
 
-
 <!-- vue-fun/src/components/ui/molecules/CartItemCatto.vue -->
 <template>
   <div class="bg-slate-700 rounded-lg shadow-sm border border-slate-600 p-6">
@@ -39,7 +38,9 @@
                 >
                   -
                 </button>
-                <span class="px-4 py-1 border-x border-slate-500 text-slate-200">{{ item.quantity }}</span>
+                <span class="px-4 py-1 border-x border-slate-500 text-slate-200">{{
+                  item.quantity
+                }}</span>
                 <button
                   @click="increaseQuantity"
                   class="px-3 py-1 text-slate-200 hover:bg-slate-600 transition-colors"

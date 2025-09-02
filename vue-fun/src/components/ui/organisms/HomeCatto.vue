@@ -2,8 +2,6 @@
 
 <template>
   <div class="min-h-screen bg-gray-900 text-gray-100">
-
-
     <!-- Main Content -->
     <div class="max-w-6xl mx-auto p-6 space-y-8">
       <!-- Header Section -->
@@ -15,12 +13,13 @@
           Vue Learning Project <span class="text-orange-500"></span>
         </h1>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Chris Catto build this as a hands-on Vue 3 starter application built to explore and demonstrate fundamental Vue
-          concepts, modern tooling, and best practices.
+          Chris Catto build this as a hands-on Vue 3 starter application built to explore and
+          demonstrate fundamental Vue concepts, modern tooling, and best practices.
         </p>
       </div>
 
       <!-- Explore Other Pages -->
+      <TutorialCardCatto />
       <div class="grid md:grid-cols-2 gap-6">
         <div
           class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-orange-500 transition-colors"
@@ -202,4 +201,5 @@
 
 <script setup lang="ts">
 import GlobeIcon from '@/components/ui/atoms/GlobeIcon.vue';
+import TutorialCardCatto from '../atoms/TutorialCardCatto.vue';
 </script>

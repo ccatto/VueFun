@@ -15,7 +15,9 @@
         :key="index"
         @click="selectedImage = image"
         class="flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors"
-        :class="selectedImage === image ? 'border-orange-500' : 'border-gray-600 hover:border-gray-500'"
+        :class="
+          selectedImage === image ? 'border-orange-500' : 'border-gray-600 hover:border-gray-500'
+        "
       >
         <img
           :src="image"

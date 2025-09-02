@@ -12,13 +12,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed } from 'vue';
 
-type StyleAnimations = 'none' | 'tada' | 'bounce' | 'pulse' | 'wobble' | 'swing'
+type StyleAnimations = 'none' | 'tada' | 'bounce' | 'pulse' | 'wobble' | 'swing';
 
 interface ButtonProps {
-  label?: string
-  variant?: 
+  label?: string;
+  variant?:
     | 'primary'
     | 'secondary'
     | 'tertiary'
@@ -29,11 +29,11 @@ interface ButtonProps {
     | 'goGreen'
     | 'funOrange'
     | 'outlineRoundedXL'
-    | 'blueGradientXL'
-  size?: 'small' | 'medium' | 'large'
-  disabled?: boolean
-  width?: 'full' | 'auto' | 'fit' | string
-  animation?: StyleAnimations
+    | 'blueGradientXL';
+  size?: 'small' | 'medium' | 'large';
+  disabled?: boolean;
+  width?: 'full' | 'auto' | 'fit' | string;
+  animation?: StyleAnimations;
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
@@ -41,46 +41,47 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   size: 'large',
   disabled: false,
   width: 'full',
-  animation: 'tada'
-})
+  animation: 'tada',
+});
 
 const emit = defineEmits<{
-  click: []
-}>()
+  click: [];
+}>();
 
-const isAnimating = ref(false)
+const isAnimating = ref(false);
 
 const handleClick = () => {
   if (props.animation !== 'none') {
-    isAnimating.value = true
+    isAnimating.value = true;
     setTimeout(() => {
-      isAnimating.value = false
-    }, 1000) // Reset after animation; 'You need to calm down' T-Swizzle HA
+      isAnimating.value = false;
+    }, 1000); // Reset after animation; 'You need to calm down' T-Swizzle HA
   }
-  emit('click')
-}
+  emit('click');
+};
 
 // Width styles mapping
 const widthStyles = {
   full: 'w-full',
   auto: 'w-auto',
   fit: 'w-fit',
-}
+};
 
 // Get width class - either from predefined options or custom class
 const getWidthClass = (width: string) => {
-  return widthStyles[width as keyof typeof widthStyles] || width
-}
+  return widthStyles[width as keyof typeof widthStyles] || width;
+};
 
-// computed is imported from Vue and new Composition API 
+// computed is imported from Vue and new Composition API
 const getAnimationClass = computed(() => {
   if (!isAnimating.value || props.animation === 'none') {
-    return ''
+    return '';
   }
-  return `animate-${props.animation}`
-})
+  return `animate-${props.animation}`;
+});
 
-const baseStyles = computed(() => `
+const baseStyles = computed(
+  () => `
   inline-flex 
   items-center 
   justify-center 
@@ -96,7 +97,8 @@ const baseStyles = computed(() => `
   active:scale-95
   ${getWidthClass(props.width)}
   ${getAnimationClass.value}
-`)
+`
+);
 
 const variantStyles = {
   primary: `
@@ -255,19 +257,21 @@ const variantStyles = {
     transform 
     hover:scale-105
   `,
-}
+};
 
 const sizeStyles = {
   small: 'px-3 py-1 text-sm',
   medium: 'px-4 py-2 text-base',
   large: 'px-6 py-3 text-lg',
-}
+};
 
-const classes = computed(() => `
+const classes = computed(
+  () => `
   ${baseStyles.value}
   ${variantStyles[props.variant]}
   ${sizeStyles[props.size]}
-`)
+`
+);
 </script>
 
 <style scoped>
@@ -276,13 +280,19 @@ const classes = computed(() => `
   0% {
     transform: scale3d(1, 1, 1);
   }
-  10%, 20% {
+  10%,
+  20% {
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
-  30%, 50%, 70%, 90% {
+  30%,
+  50%,
+  70%,
+  90% {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-  40%, 60%, 80% {
+  40%,
+  60%,
+  80% {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
   100% {
@@ -291,10 +301,15 @@ const classes = computed(() => `
 }
 
 @keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
     transform: translate3d(0, 0, 0);
   }
-  40%, 43% {
+  40%,
+  43% {
     transform: translate3d(0, -30px, 0);
   }
   70% {
@@ -329,7 +344,6 @@ const classes = computed(() => `
   animation: pulse 1s;
 }
 </style>
-
 
 <!--
   _____                           _        _   _

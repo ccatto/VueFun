@@ -5,7 +5,8 @@ import type { Product } from '@/types/product';
 export const sampleProduct: Product = {
   id: 1,
   name: 'Premium Walking Boot',
-  description: 'Orthopedic walking boot designed for post-injury recovery and rehabilitation. Features adjustable air cushioning, rigid sole protection, and breathable interior lining for optimal comfort during healing.',
+  description:
+    'Orthopedic walking boot designed for post-injury recovery and rehabilitation. Features adjustable air cushioning, rigid sole protection, and breathable interior lining for optimal comfort during healing.',
   price: 89.99,
   originalPrice: 119.99,
   category: 'Medical Equipment',
@@ -20,18 +21,18 @@ export const sampleProduct: Product = {
     'Breathable moisture-wicking liner',
     'Low-profile design fits most shoes',
     'Universal left/right compatibility',
-    'Easy-release buckles and straps'
+    'Easy-release buckles and straps',
   ],
   sizes: [
     { id: 'xs', name: 'X-Small', value: 'XS' },
     { id: 's', name: 'Small', value: 'S' },
     { id: 'm', name: 'Medium', value: 'M' },
     { id: 'l', name: 'Large', value: 'L' },
-    { id: 'xl', name: 'X-Large', value: 'XL' }
+    { id: 'xl', name: 'X-Large', value: 'XL' },
   ],
   colors: [
     { id: 'black', name: 'Black', hex: '#000000' },
-    { id: 'gray', name: 'Gray', hex: '#808080' }
+    { id: 'gray', name: 'Gray', hex: '#808080' },
   ],
   inStock: true,
   stockCount: 15,
@@ -42,7 +43,8 @@ export const relatedProducts: Product[] = [
   {
     id: 2,
     name: 'Adjustable Aluminum Crutches',
-    description: 'Lightweight aluminum crutches with comfortable underarm pads and non-slip rubber tips. Height adjustable from 4\'2" to 5\'10".',
+    description:
+      'Lightweight aluminum crutches with comfortable underarm pads and non-slip rubber tips. Height adjustable from 4\'2" to 5\'10".',
     category: 'Medical Equipment',
     price: 34.99,
     images: [
@@ -54,7 +56,8 @@ export const relatedProducts: Product[] = [
   {
     id: 3,
     name: 'Forearm Crutches (Pair)',
-    description: 'Ergonomic forearm crutches with adjustable cuff and comfortable grip handles. Ideal for long-term mobility support.',
+    description:
+      'Ergonomic forearm crutches with adjustable cuff and comfortable grip handles. Ideal for long-term mobility support.',
     category: 'Medical Equipment',
     price: 49.99,
     images: [

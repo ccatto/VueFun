@@ -83,10 +83,6 @@ defineEmits<{
 }>();
 
 const canAddToCart = computed((): boolean => {
-  return (
-    product.inStock &&
-    (!product.sizes || selectedSize) &&
-    (!product.colors || selectedColor)
-  );
+  return product.inStock && (!product.sizes || selectedSize) && (!product.colors || selectedColor);
 });
 </script>
