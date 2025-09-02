@@ -14,7 +14,7 @@
     <h2 class="text-2xl font-semibold text-orange-500 mb-3">📚 Vue Tutorial Catto</h2>
 
     <p class="text-gray-300 mb-6">
-      Master Vue 3 with our comprehensive interactive tutorial. Learn Composition API, Composables,
+      Learn Vue 3 with our comprehensive interactive tutorial. Learn Composition API, Composables,
       Pinia state management, Vue Router, and advanced patterns through hands-on examples and
       real-world scenarios.
     </p>

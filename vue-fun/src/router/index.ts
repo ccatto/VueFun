@@ -18,7 +18,7 @@ const routes = [
     name: 'TutorialCatto',
     component: TutorialCatto,
     meta: {
-      title: 'Vue Tutorial Catto - Master Vue 3',
+      title: 'Vue Tutorial Catto - Learn Vue 3',
       description:
         'Comprehensive Vue 3 tutorial covering Composition API, Pinia, Vue Router and more',
       requiresProgress: false, // Set to true if you want to track tutorial progress

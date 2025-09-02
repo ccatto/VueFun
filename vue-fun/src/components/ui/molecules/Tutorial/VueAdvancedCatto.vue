@@ -7,7 +7,7 @@
     </h3>
 
     <p class="text-gray-300 mb-4">
-      Master advanced Vue patterns and techniques for building complex, scalable applications with
+      Learn advanced Vue patterns and techniques for building complex, scalable applications with
       modern development practices.
     </p>
 

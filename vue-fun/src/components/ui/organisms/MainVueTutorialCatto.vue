@@ -82,7 +82,7 @@
           <span class="text-4xl">🐱</span>
         </div>
         <h2 class="text-4xl font-bold text-gray-100 mb-4">
-          Master Vue 3 with <span class="text-orange-400">Catto</span>!
+          Learn Vue 3 with <span class="text-orange-400">Catto</span>!
         </h2>
         <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
           Learn Vue 3's most important concepts through interactive examples and hands-on tutorials.

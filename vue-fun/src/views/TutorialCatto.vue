@@ -17,7 +17,7 @@
           <h1
             class="text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent mb-4"
           >
-            Master Vue 3 with Catto!
+            Learn Vue 3 with Catto!
           </h1>
           <p class="text-gray-400 max-w-2xl mx-auto text-lg">
             Learn Vue 3's most important concepts through interactive examples and hands-on
@@ -71,7 +71,7 @@
           </div>
           <h3 class="text-2xl font-semibold text-orange-500 mb-4">Keep Learning!</h3>
           <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
-            You're on your way to mastering Vue 3! Complete all modules to unlock your Vue
+            You're on your way to learning Vue 3! Complete all modules to unlock your Vue
             expertise. Each concept builds upon the previous one, creating a solid foundation for
             real-world development.
           </p>
