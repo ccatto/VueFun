@@ -2,7 +2,7 @@
 
 <template>
   <header class="bg-blue-900 text-slate-50 p-4">
-    <h1 class="text-xl font-bold">HealthTest - Vue Fun App</h1>
+    <h1 class="text-xl font-bold">Tutorial Test - Vue Fun App</h1>
     <nav class="space-x-4">
       <RouterLink to="/" class="hover:underline" active-class="font-bold underline">
         Home
