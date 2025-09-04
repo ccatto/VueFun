@@ -4,6 +4,8 @@ Fun with exploring Vue.js
 ## Web app URL 
 [Chris Catto Vue Tutorial Fun](https://chris-catto-health-vue-fun.fly.dev/)
 
+* last deployed 9.4.25;
+
 ## August 2025 
 
 This is a Vue starter app developed by Chris Catto to get used to Vue and have some fun;
